@@ -1,25 +1,16 @@
-import React from 'react';
-// import logo from './logo.svg';
-// import backimg from '../public/backimg.png'
+import React, { useState } from 'react';
+import Card from './Card'
 import './App.css';
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src='/img/backimg.png' className="card" alt="tarot card" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Card anecdotes={[1, 4, 3, 2, 8, 5]} />
+
+
     </div>
   );
 }
