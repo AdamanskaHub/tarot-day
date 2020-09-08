@@ -10,7 +10,6 @@ function App() {
 
       <Card anecdotes={[1, 4, 3, 2, 8, 5]} />
 
-
     </div>
   );
 }
