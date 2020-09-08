@@ -13,8 +13,15 @@ function Card(props) {
     if (!clicked) {
       setCount(anecdotes[Math.floor(Math.random() * anecdotes.length)])
     }
-
   }
+
+  // TO DO:
+  // creer liste de carte et text
+  // display 
+  // Choisir alétoirement une carte et son texte 
+  // display 
+  // Changer le texte aleatoirement
+  // display 
 
   return (
     <div className="main">
