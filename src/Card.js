@@ -3,6 +3,19 @@ import './App.css';
 
 function Card(props) {
 
+  const articles = [
+    {
+      cardName: 'Name of the card',
+      dialogue: ['dial 1', 'dial 2', 'dial 3'],
+    },
+    {
+      cardName: 'Name of the card 2',
+      dialogue: ['dial 12', 'dial 22', 'dial 32'],
+    },
+  ];
+
+  console.log(articles[1].dialogue[1])
+
   const [count, setCount] = useState(0);
   const [clicked, setClicked] = useState(false);
 
@@ -15,9 +28,6 @@ function Card(props) {
     }
   }
 
-  // TO DO:
-  // creer liste de carte et text
-  // display 
   // Choisir alétoirement une carte et son texte 
   // display 
   // Changer le texte aleatoirement
