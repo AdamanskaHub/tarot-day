@@ -52,9 +52,8 @@ function Card(props) {
           {dialogue}
         </div>
         <div className="bubble-border" />
-
-
       </div>
+      <img src="./img/skeleton.gif" alt="skeleton playing music" />
 
     </div>
 
