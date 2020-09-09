@@ -3,49 +3,48 @@ import './App.css';
 
 function Card(props) {
 
-  const articles = [
+  const cardList = [
     {
       cardName: 'Name of the card',
-      dialogue: ['dial 1', 'dial 2', 'dial 3'],
+      cardPicture: '/img/backimg.png',
+      dialogue: ['option a', 'option b', 'option c'],
     },
     {
       cardName: 'Name of the card 2',
-      dialogue: ['dial 12', 'dial 22', 'dial 32'],
+      cardPicture: '/img/backimg.png',
+      dialogue: ['option 0', 'option 1', 'option 2'],
     },
   ];
 
-  console.log(articles[1].dialogue[1])
+  // console.log(articles[1].dialogue[1])
 
-  const [count, setCount] = useState(0);
+  const [dialogue, setDialogue] = useState(0);
+  const [card, setCard] = useState(0);
   const [clicked, setClicked] = useState(false);
 
-  const { anecdotes } = props;
+  // const { anecdotes } = props;
 
   const cardDisplay = () => {
     setClicked(true);
     if (!clicked) {
-      setCount(anecdotes[Math.floor(Math.random() * anecdotes.length)])
+      setCard([Math.floor(Math.random() * 2)])
+      setDialogue([Math.floor(Math.random() * 3)])
     }
   }
 
-  // Choisir alétoirement une carte et son texte 
-  // display 
-  // Changer le texte aleatoirement
-  // display 
+  console.log(card)
+  console.log(cardList[card].dialogue[dialogue])
 
   return (
     <div className="main">
 
       <img src='/img/backimg.png' className="card" alt="tarot card" />
-      <p>
-        Text the guy says
-        </p>
-      <p>You clicked and random value from array: <h4>{count}</h4></p>
+      <p>Text the guy says, card = {card}, dialogue = {dialogue}</p>
+      <p>You clicked and random value from array: {dialogue}</p>
       <button onClick={cardDisplay}>
         Click me
       </button>
     </div>
-
 
   );
 }
